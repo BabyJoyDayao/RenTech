@@ -4,10 +4,14 @@ import AnalyticsDashboard from './components/AnalyticsDashboard';
 import Catalog from './components/Catalog';
 import ProductCard from './components/ProductCard';
 import SearchAndFilter from './components/SearchAndFilter';
+import Signup from './components/SignUp';
+import Login from './components/Login';
+import StaffManagement from './components/StaffManagement';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("All");
+  const [extraUsers, setExtraUsers] = useState({});
 
   return (
     <div className="min-h-screen bg-gray-50 p-8">
@@ -48,6 +52,36 @@ function App() {
           selectedCategory={category}
           onCategoryChange={setCategory}
         />
+
+        <section className="mb-10">
+          <h2 className="text-xl font-semibold text-gray-600 mb-4 border-b pb-2">
+            3. Login Component
+          </h2>
+          <Login
+            onLogin={(role) => console.log(`Logged in as ${role}`)}
+            onBack={() => console.log('Back pressed')}
+          />
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-xl font-semibold text-gray-600 mb-4 border-b pb-2">
+            4. Sign Up Component
+          </h2>
+          <Signup
+            onLogin={(role) => console.log(`Logged in as ${role}`)}
+            onBack={() => console.log('Back pressed')}
+            onNavigateToLogin={() => console.log('Navigate to login')}
+            extraUsers={extraUsers}
+            setExtraUsers={setExtraUsers}
+          />
+        </section>
+
+        <section className="mb-10">
+          <h2 className="text-xl font-semibold text-gray-600 mb-4 border-b pb-2">
+            5. Staff Management Component
+          </h2>
+          <StaffManagement />
+        </section>
       </div>
     </div>
   );
