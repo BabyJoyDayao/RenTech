@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { assignUserRole, getRentalHistory, getTransactionSummary } from "../../service/transactionMonitoring.js"; 
+import { assignUserRole, getRentalHistory, getTransactionSummary } from "../../service/transactionMonitoring.service.js"; 
 
 describe("RenTech Week 2 Day 2 - Transaction Monitoring Test Suite", () => {
 

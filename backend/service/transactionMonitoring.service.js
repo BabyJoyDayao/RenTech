@@ -1,4 +1,4 @@
-import { UserModel, RentalRecordModel } from '../model/transactionMonitoring.js';
+import { UserModel, RentalRecordModel } from '../model/transactionMonitoring.model.js';
 
 // WEEK2 DAY2
 const mockRentalsDb = [
