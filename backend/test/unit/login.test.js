@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { authenticateUser, registerNewCustomer, verifyRolePermission } from '../../services/login.service.js';
+import { authenticateUser, registerNewCustomer, verifyRolePermission } from '../../service/login.service.js';
 
 describe('Week 2 Day 1 - Login & Role Management Testing', () => {
 

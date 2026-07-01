@@ -1,4 +1,4 @@
-import { UserModel } from '../models/login.model.js';
+import { UserModel } from '../model/login.model.js';
 
 const mockUsersDb = [
   new UserModel({ username: 'admin', password: 'admin', role: 'Admin' }),
