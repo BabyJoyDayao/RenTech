@@ -13,9 +13,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const forecastRouter = express.Router();
-registerForecastRoute(forecastRouter);
-
 const bookingRoutes = express.Router();
 const productRoutes = express.Router();
 const loginRoutes = express.Router();
