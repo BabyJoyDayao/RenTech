@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor, waitForElementToBeRemoved } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import SystemSetting from '../../components/SystemSetting.jsx'; 
+import SystemSetting from '../../components/SystemSetting.jsx';
 
 describe('SystemSetting Component - Unit Tests', () => {
 
   const renderAndClearLoading = async () => {
-    render(<SystemSetting />);
+    render(<SystemSetting/>);
     
     const loadingText = screen.getByText(/Loading component states/i);
     await waitForElementToBeRemoved(loadingText);
