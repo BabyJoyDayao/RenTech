@@ -18,7 +18,7 @@ vi.mock("../../services/inventoryApiClient", () => ({
     Promise.resolve({ total: 1, data: [{ id: 1, name: "Test Product", status: "Available" }] })
   ),
   getTransactions: vi.fn(() =>
-    Promise.resolve({ data: [{ id: "TX-001", username: "ana rivera", item: "Vintage Gatsby Sequin Dress", date: "May 01, 2026", amount: 1500, status: "Active" }] })
+    Promise.resolve({ data: [{ id: "TX-001", username: "ana rivera", itemName: "Vintage Gatsby Sequin Dress", date: "May 01, 2026", totalCost: 1500, status: "Active" }] })
   ),
   softDeleteProduct: vi.fn(() => Promise.resolve({ status: "success" })),
   updateTransactionStatus: vi.fn(() => Promise.resolve({ status: "success" })),

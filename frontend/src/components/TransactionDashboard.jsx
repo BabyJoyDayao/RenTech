@@ -48,9 +48,9 @@ export default function TransactionDashboard() {
             rows.map((t) => ({
               id: t.id,
               username: t.username || 'system',
-              itemName: t.item,
+              itemName: t.itemName,
               date: t.date,
-              totalCost: Number(String(t.amount).replace(/[^\d]/g, '')) || 0,
+              totalCost: t.totalCost != null ? Number(t.totalCost) : 0,
               status: t.status,
             }))
           );

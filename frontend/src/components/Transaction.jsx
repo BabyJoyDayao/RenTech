@@ -42,10 +42,10 @@ const Transaction = () => {
             .filter((t) => !username || (t.username || '').toLowerCase() === username.toLowerCase())
             .map((t) => ({
               id: t.id,
-              item: t.item,
+              item: t.itemName,
               date: t.date,
               status: t.status,
-              amount: `₱${Number(String(t.amount).replace(/[^\d]/g, '')) || 0}`
+              amount: `₱${Number(String(t.totalCost).replace(/[^\d]/g, '')) || 0}`
             }));
           if (mapped.length > 0) {
             setTransactions(mapped);
