@@ -1,4 +1,4 @@
-// @vitest-environment happy-dom
+// @vitest-environment jsdom
 import '@testing-library/jest-dom';
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
@@ -47,8 +47,8 @@ function LoginPage({ onLogin, onBack }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const username = form.username.value;
-    const password = form.password.value;
+    const username = form.elements.username.value;
+    const password = form.elements.password.value;
 
     // Try remote auth first (tests stub `fetch`).
     try {
